@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js - Pure Javascript version</title>
+
+
+	<link rel="stylesheet" type="text/css" href="javascript.fullPage.css" />
+	<script language="javascript"> 
+	function toggle() {
+		var ele = document.getElementById("toggleText");
+		var text = document.getElementById("displayText");
+		if(ele.style.display == "block") {
+    		ele.style.display = "none";
+			text.innerHTML = "show";
+  		}
+		else {
+			ele.style.display = "block";
+		thext.innerHTML = "hide";
+		}
+	} 
+</script>
+
+	<style>
+		/* Reset CSS
+		 * --------------------------------------- */
+		body,div,dl,dt,dd,li,h1,h2,h3,h4,h5,h6,pre,
+		form,fieldset,input,textarea,p,blockquote,th,td {
+		    padding: 0;
+		    margin: 0;
+		}
+		a{
+			text-decoration:none;
+		}
+		table {
+		    border-spacing: 0;
+		}
+		fieldset,img{
+		    border: 0;
+		}
+		address,caption,cite,code,dfn,em,strong,th,var {
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		strong{
+			font-weight: bold;
+		}
+		ol,ul {
+		    list-style-type: square;
+		    padding: 100;
+		    margin: 100;
+		}
+		caption,th {
+		    text-align: left;
+
+		}
+		h1,h2,h3,h4,h5,h6 {
+		    font-weight: normal;
+		    font-size: 100%;
+		    margin:0;
+		    padding:0;
+		    color:#000000;
+		}
+		q:before,q:after {
+		    content:'';
+		}
+		abbr,acronym { border: 0;
+		}
+
+
+		/* Custom CSS
+		 * --------------------------------------- */
+		body{
+			font-family: Chalkduster, fantasy;
+			color: #000000;
+		}
+		h1{
+			font-size: 6em;
+		}
+		h2{
+			font-size: 1.5em;
+		}
+		p{
+			font-size: 3em;
+		}
+		.content{
+			position: relative;
+			top: 40%;
+			transform: translateY(-50%);
+			text-align: center;
+		}
+
+		/* Section 1
+		 * --------------------------------------- */
+		#section0{
+			background-color: #FFFFFF;
+		}
+		#section0 h1{
+			color: #000000;
+		}
+		#section0 p{
+			color: #000000;
+		}
+
+
+		/* Section 2
+		 * --------------------------------------- */
+		#section1{
+			background-color: #FFFFFF;
+		}
+		#section1 h1{
+			color: #000000;
+		}
+		#section1 p{
+			opacity: 0.8;
+		}
+
+
+		/* Section 3
+		 * --------------------------------------- */
+		#section2{
+			background-color: #FFFFF;
+		}
+		#section2 h1{
+			color: #00000;
+		}
+		#section2 p{
+			opacity: 0.6;
+		}
+	</style>
+</head>
+<body>
+
+
+<div id="fullpage">
+	<div class="section" id="section0">
+		
+		<div class="content">
+			<img src="flowers.jpg" width="400" height="400" position="center">
+			<p>Hello! I'm Yujie Zhang.
+			</p>
+			 &nbsp  
+			 &nbsp
+			<h2>I like: Python, ICPC, matcha latte, instant noodles, stuffed animals and </h2>
+			<h2>Fermat’s Last Theorem.                   </h2>
+			&nbsp
+			<h2>I don’t like: segfault, chai latte, Chicago’s wind, prime numbers and Stirling's approximation. </h2>
+
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div class="slide" id="slide1">
+			<div class="content">
+				<h1>About Me</h1>
+				<p>
+					Currently, I'm a third-year UChicago student majoring in computer science and mathematics. I'm interested in algorithm problems, machine learning models and combinatorics questions.
+				</p>
+			</div>
+		</div>
+		<div class="slide" id="slide2">
+			<div class="content">
+				<h1>Slides too!</h1>
+			</div>
+		</div>
+		<div class="slide" id="slide2">
+			<div class="content">
+				<h1>More slides!</h1>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="content">
+			<h1>What I do For Fun</h1>
+			<p>Polaroid</p>
+			<a id="displayText" href="javascript:toggle();">Polaroid</a> <== click Here
+			<div id="toggleText" style="display: none"><h1>peek-a-boo</h1></div>
+			<p>Theater</p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="javascript.fullPage.js"></script>
+<script type="text/javascript">
+	fullpage.initialize('#fullpage', {
+		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+		menu: '#menu',
+		css3:true
+	});
+
+</script>
+
+</body>
+</html>
